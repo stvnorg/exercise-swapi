@@ -8,7 +8,8 @@ UPPER_END = 100
 
 SANITY_CHECK_ERR_MSG = """
 You need to replace the swapi BASE_URL
-in your /path/lib/python/swapi/settings.py with value 'swapi.dev'
+in your /path/lib/python{version}/swapi/settings.py
+with value 'http://swapi.dev'
 """
 
 exercise_list = [
@@ -78,7 +79,7 @@ def exercise_three():
 
 def exercise_swapi(args):
     if len(args) != 1:
-        print("Usage ./exercise.py <exercise_number>")
+        print("Usage: ./exercise.py <exercise_number>")
         print("./exercise.py 1 --> {}".format(exercise_list[0]))
         print("./exercise.py 2 --> {}".format(exercise_list[1]))
         print("./exercise.py 3 --> {}".format(exercise_list[2]))
