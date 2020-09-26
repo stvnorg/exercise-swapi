@@ -36,14 +36,12 @@ def sanity_check(func):
 def exercise_one():
     print(exercise_list[0])
     for film in swapi.get_all("films").iter():
-        try:
-            if film.title == "Return of the Jedi":
-                ships = film.get_starships()
-                for ship in ships.iter():
-                    print(ship.name)
-                break
-        except:
-            pass
+        if film.title == "Return of the Jedi":
+            ships = film.get_starships()
+            for ship in ships.iter():
+                print(ship.name)
+            break
+
 
 @sanity_check
 def exercise_two():
